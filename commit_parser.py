@@ -5,7 +5,7 @@ import re
 class CommitParser:
 
     file_ext = ""
-    DEFAULT_MSG = " a new "
+    DEFAULT_MSG = " "
 
     def __init__(self, file_path):
         self.file_path = file_path
