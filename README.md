@@ -1,2 +1,1 @@
-#commit/This is a commit/end
-# Directory watcher - Git event
+# Directory change listener - Git event

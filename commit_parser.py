@@ -13,7 +13,7 @@ class CommitParser:
     def file_exist(self):
         if os.path.lexists(self.file_path):
             return True
-        raise FileNotFoundError("ERROR! File not found!\nPlease check the file path.")
+        return False
 
     def file_extension(self):
         if self.file_path and self.file_exist():
