@@ -1,1 +1,1 @@
-# git-event-reactio
+# Directory watcher - Git event
