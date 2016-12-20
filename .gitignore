@@ -1,5 +1,5 @@
 reated by https://www.gitignore.io/api/intellij,pycharm
-
+#commit/ignore python script files/end
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -88,3 +88,4 @@ fabric.properties
 # End of https://www.gitignore.io/api/intellij,pycharm
 .*.py
 /test
+_pychache_
