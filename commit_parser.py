@@ -1,5 +1,5 @@
 import os
-from modifier import FileModifier
+from file_modifier import FileModifier
 
 
 class CommitParser:
@@ -16,19 +16,15 @@ class CommitParser:
                 return True
         except FileNotFoundError as error:
             print(error)
-        return False
+            exit(0)
 
     def file_extension(self):
-        splitted_path = self.file_path.split("/")
+        splitted_path = self.file_path.split("\\")
         return splitted_path[len(splitted_path)-1]
 
     def make_commit_message(self, event_type):
         file_modifier = FileModifier(self.file_path)
         file_modifier.overwrite_file_content()
-        if self.file_exist():
+        if file_modifier.commit_message:
             return file_modifier.commit_message
         return event_type + self.SPACE + self.file_extension()
-
-# if __name__ == '__main__':
-#     cp = CommitParser("log")
-#     print(cp.make_commit_message("test"))

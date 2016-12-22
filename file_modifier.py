@@ -19,15 +19,15 @@ class FileModifier:
         content = self.read()
         commit_message = ""
         pattern = ""
-        isFit=False
+        is_match = False
         for item in content:
             match_line = re.match(r"#commit/.*/end", item, re.M | re.I)
             if match_line:
                 pattern = match_line.group()
                 commit_message = str(match_line.group()).split("/")[1]
-                isFit=True
+                is_match = True
                 break
-        if isFit:
+        if is_match:
             content.remove(pattern)
         return content, commit_message
 

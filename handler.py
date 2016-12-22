@@ -6,7 +6,5 @@ class Handler(FileSystemEventHandler):
 
     @staticmethod
     def on_any_event(event, **kwargs):
-        if event.is_directory:
-            pass
-        elif event.event_type:
+        if event.event_type == 'created' or event.event_type == 'modified':
             GitEvent.git_event(event.src_path, "master", str(event.event_type))
