@@ -89,3 +89,5 @@ fabric.properties
 .*.py
 /test
 _pychache_
+/_pychache_
+/idea
