@@ -29,5 +29,5 @@ class CommitParser:
         if file_modifier.commit_message:
             Logger.logging(event_type, file_modifier.commit_message)
             return file_modifier.commit_message
-        Logger.logging(event_type,event_type + self.SPACE + self.file_extension())
+        Logger.logging(event_type, event_type + self.SPACE + self.file_extension())
         return event_type + self.SPACE + self.file_extension()

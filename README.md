@@ -10,3 +10,5 @@ If file is not contains commit pattern the file is going to push
 to remote repository according to file event type + file name.
 (e.g commit message: modified README.md)
 
+- Logger is a clear-cut, this class is going to save date of event, event type and the commit message
+to logs/log.csv.
