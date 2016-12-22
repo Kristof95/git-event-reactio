@@ -36,9 +36,3 @@ class FileModifier:
         with open(self.filepath, "w") as write_file:
             for new in new_content:
                 write_file.write(new + "\n")
-
-
-# if __name__ == '__main__':
-#     fm = FileModifier("log")
-#     fm.overwrite_file_content()
-#     print(fm.commit_message)

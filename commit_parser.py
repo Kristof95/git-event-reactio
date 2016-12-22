@@ -1,5 +1,6 @@
 import os
 from file_modifier import FileModifier
+from logger import Logger
 
 
 class CommitParser:
@@ -26,5 +27,7 @@ class CommitParser:
         file_modifier = FileModifier(self.file_path)
         file_modifier.overwrite_file_content()
         if file_modifier.commit_message:
+            Logger.logging(event_type, file_modifier.commit_message)
             return file_modifier.commit_message
+        Logger.logging(event_type,event_type + self.SPACE + self.file_extension())
         return event_type + self.SPACE + self.file_extension()
