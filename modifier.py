@@ -19,13 +19,16 @@ class FileModifier:
         content = self.read()
         commit_message = ""
         pattern = ""
+        isFit=False
         for item in content:
             match_line = re.match(r"#commit/.*/end", item, re.M | re.I)
             if match_line:
                 pattern = match_line.group()
                 commit_message = str(match_line.group()).split("/")[1]
+                isFit=True
                 break
-        content.remove(pattern)
+        if isFit:
+            content.remove(pattern)
         return content, commit_message
 
     def overwrite_file_content(self):
