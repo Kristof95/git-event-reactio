@@ -12,7 +12,7 @@ class FileModifier:
         content = []
         with open(self.filepath, "r") as read_file:
             for line in read_file.readlines():
-                content.append(line)
+                content.append(line.replace("\n", "").strip())
         return content
 
     def remove_commit_pattern(self):
@@ -35,7 +35,7 @@ class FileModifier:
         new_content, self.commit_message = self.remove_commit_pattern()
         with open(self.filepath, "w") as write_file:
             for new in new_content:
-                write_file.write(new+"\n")
+                write_file.write(new + "\n")
 
 
 # if __name__ == '__main__':
