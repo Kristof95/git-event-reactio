@@ -13,4 +13,3 @@ to remote repository according to file event type + file name.
 - Logger is a clear-cut, this class is going to save date of event, event type and the commit message
 to logs/log.csv.
 
-#commit/commit example/end
