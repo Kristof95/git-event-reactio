@@ -6,14 +6,14 @@ class Logger:
 
     @staticmethod
     def setup_headers():
-        with open('log.csv', 'w', newline='') as fp:
+        with open('logs/log.csv', 'w', newline='') as fp:
             a = csv.writer(fp, delimiter=',')
             data = [['Date', 'Event type', 'Commit message']]
             a.writerows(data)
 
     @staticmethod
     def logging(event_type, commit_message):
-        with open("log.csv", "a", newline='') as logfile:
+        with open("logs/log.csv", "a", newline='') as logfile:
             reader = csv.reader(logfile)
             # next(reader, None)
             out = csv.writer(logfile, delimiter=',')
